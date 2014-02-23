@@ -1,0 +1,86 @@
+.ac-container{
+	width: 600px;
+	margin: 10px auto 30px auto;
+	text-align: left;
+}
+.ac-container label{
+	padding: 5px 20px;
+	position: relative;
+	z-index: 20;
+	display: block;
+	height: 30px;
+	cursor: pointer;
+	color: #222;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	line-height: 33px;
+	font-size: 19px;
+	background: #ddf1ee;
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+
+.ac-container label a{
+	float: right;
+	font-size:0.6em;
+}
+
+.ac-container label span{
+	float: right;
+	font-size:0.6em;
+	color:#888;
+}
+
+.ac-container label:hover{
+	background: #ddf1ee;
+}
+.ac-container input:checked + label,
+.ac-container input:checked + label:hover{
+	background: #c6e1ec;
+	color: #3d7489;
+	text-shadow: 0px 1px 1px rgba(255,255,255, 0.6);
+	box-shadow: 
+		0px 0px 0px 1px rgba(155,155,155,0.3), 
+		0px 2px 2px rgba(0,0,0,0.1);
+}
+.ac-container label:hover:after,
+.ac-container input:checked + label:hover:after{
+	content: '';
+	position: absolute;
+	width: 24px;
+	height: 24px;
+	right: 13px;
+	top: 7px;
+}
+.ac-container input{
+	display: none;
+}
+.ac-container article{
+	background: rgba(255, 255, 255, 0.5);
+	margin-top: -1px;
+	overflow: hidden;
+	height: 0px;
+	position: relative;
+	z-index: 10;
+	-webkit-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-moz-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-o-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	-ms-transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+	transition: height 0.3s ease-in-out, box-shadow 0.6s linear;
+}
+.ac-container article p{
+	color: #777;
+	line-height: 23px;
+	font-size: 14px;
+	padding: 0 10px;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+}
+.ac-container input:checked ~ article{
+	-webkit-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-moz-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-o-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	-ms-transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	transition: height 0.5s ease-in-out, box-shadow 0.1s linear;
+	box-shadow: 0px 0px 0px 1px rgba(155,155,155,0.3);
+}
