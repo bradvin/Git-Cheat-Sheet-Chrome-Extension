@@ -1,6 +1,7 @@
 {
   "name": "Git Cheat Sheet",
-  "version": "1.0.0",
+	"short_name": "Git Cheat Sheet",
+  "version": "1.0.1",
   "manifest_version": 2,
   "description": "Handy Git cheat sheet for easy access to common Git commands and terminology",
   "homepage_url": "http://themergency.com/git-cheat-sheet-chrome-extension",
