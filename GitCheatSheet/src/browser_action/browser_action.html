@@ -63,30 +63,34 @@
 		}
 
 		.ac-container input:checked#ac-1 ~ article {
-			height: 471px;
+			height: 511px;
 		}
 
 		.ac-container input:checked#ac-2 ~ article {
-			height: 399px;
+			height: 279px;
 		}
 
 		.ac-container input:checked#ac-3 ~ article {
-			height: 238px;
+			height: 398px;
 		}
 
 		.ac-container input:checked#ac-4 ~ article {
-			height: 425px;
+			height: 225px;
 		}
 
 		.ac-container input:checked#ac-5 ~ article {
-			height: 156px;
+			height: 406px;
 		}
 
 		.ac-container input:checked#ac-6 ~ article {
-			height: 325px;
+			height: 225px;
 		}
 
 		.ac-container input:checked#ac-7 ~ article {
+			height: 367px;
+		}
+		
+		.ac-container input:checked#ac-8 ~ article {
 			height: 207px;
 		}
 	</style>
@@ -208,7 +212,41 @@
 			</div>
 			<div>
 				<input class="rad_section" id="ac-2" name="accordion-1" type="radio">
-				<label for="ac-2">Showing/Undoing Changes<span>status/diff/log/blame/reset/revert</span></label>
+				<label for="ac-2">Git Setup<span>config</span></label>
+				<article class="ac-medium">
+					<table class="table table-responsive table-hover">
+						<tbody>
+						<tr>
+							<td>git config user.name <span>&lt;username&gt;</span></td>
+							<td>Setup user name locally</td>
+						</tr>
+						<tr>
+							<td>git config --global user.name <span>&lt;username&gt;</span></td>
+							<td>Setup user name globally</td>
+						</tr>
+						<tr>
+							<td>git config user.email <span>&lt;username&gt;</span></td>
+							<td>Setup user email locally</td>
+						</tr>
+						<tr>
+							<td>git config --global user.email <span>&lt;username&gt;</span></td>
+							<td>Setup user email globally</td>
+						</tr>
+						<tr>
+							<td>git config --global core.editor vim <span>&lt;username&gt;</span></td>
+							<td>Setup your editor globally</td>
+						</tr>
+						<tr>
+							<td>git config --list</td>
+							<td>Checking your settings</td>
+						</tr>
+						</tbody>
+					</table>
+				</article>
+			</div>
+			<div>
+				<input class="rad_section" id="ac-3" name="accordion-1" type="radio">
+				<label for="ac-3">Showing/Undoing Changes<span>status/diff/log/blame/reset/revert</span></label>
 				<article class="ac-medium">
 					<table class="table table-responsive table-hover">
 						<tbody>
@@ -253,8 +291,8 @@
 				</article>
 			</div>
 			<div>
-				<input class="rad_section" id="ac-3" name="accordion-1" type="radio">
-				<label for="ac-3">Staging<span>add/rm</span></label>
+				<input class="rad_section" id="ac-4" name="accordion-1" type="radio">
+				<label for="ac-4">Staging<span>add/rm</span></label>
 				<article class="ac-large">
 					<table class="table table-responsive table-hover">
 						<tbody>
@@ -283,8 +321,8 @@
 				</article>
 			</div>
 			<div>
-				<input class="rad_section" id="ac-4" name="accordion-1" type="radio">
-				<label for="ac-4">Publishing<span>commit/stash/push</span></label>
+				<input class="rad_section" id="ac-5" name="accordion-1" type="radio">
+				<label for="ac-5">Publishing<span>commit/stash/push</span></label>
 				<article class="ac-large">
 					<table class="table table-responsive table-hover">
 						<tbody>
@@ -333,8 +371,8 @@
 				</article>
 			</div>
 			<div>
-				<input class="rad_section" id="ac-5" name="accordion-1" type="radio">
-				<label for="ac-5">Updating and Getting Code<span>fetch/pull</span></label>
+				<input class="rad_section" id="ac-6" name="accordion-1" type="radio">
+				<label for="ac-6">Updating and Getting Code<span>fetch/pull</span></label>
 				<article class="ac-large">
 					<table class="table table-responsive table-hover">
 						<tbody>
@@ -359,8 +397,8 @@
 				</article>
 			</div>
 			<div>
-				<input class="rad_section" id="ac-6" name="accordion-1" type="radio">
-				<label for="ac-6">Branching<span>branch/checkout</span></label>
+				<input class="rad_section" id="ac-7" name="accordion-1" type="radio">
+				<label for="ac-7">Branching<span>branch/checkout</span></label>
 				<article class="ac-large">
 					<table class="table table-responsive table-hover">
 						<tbody>
@@ -393,6 +431,10 @@
 							<td>Get a remote branch from origin into a local branch (naming the branch and switching to it)</td>
 						</tr>
 						<tr>
+							<td>git branch <span>-d</span> <span>&lt;branch name&gt;</span></td>
+							<td>Delete a branch only locally</td>
+						</tr>
+						<tr>
 							<td>git push origin <span>-delete</span> <span>&lt;branch name&gt;</span></td>
 							<td>Delete a branch locally and remotely</td>
 						</tr>
@@ -401,8 +443,8 @@
 				</article>
 			</div>
 			<div>
-				<input class="rad_section" id="ac-7" name="accordion-1" type="radio">
-				<label for="ac-7">Branching (Advanced)<span>merge/rebase</span></label>
+				<input class="rad_section" id="ac-8" name="accordion-1" type="radio">
+				<label for="ac-8">Branching (Advanced)<span>merge/rebase</span></label>
 				<article class="ac-large">
 					<table class="table table-responsive table-hover">
 						<tbody>
