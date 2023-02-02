@@ -1,435 +1,613 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-	<link rel="stylesheet" type="text/css" href="css_accordian.css">
-	<style type="text/css">
-		#mainPopup {
-			padding: 10px;
-			font-family: courier new;
-		}
+  <head>
+    <link rel="stylesheet" type="text/css" href="css_accordian.css" />
+    <style type="text/css">
+      #mainPopup {
+        padding: 10px;
+        font-family: courier new;
+      }
 
-		label[for="ac-head"] {
-			font-size: 2em;
-			margin: 0;
-		}
+      label[for="ac-head"] {
+        font-size: 2em;
+        margin: 0;
+      }
 
-		.table {
-			width: 100%;
-		}
+      .table {
+        width: 100%;
+      }
 
-		table {
-			max-width: 100%;
-			background-color: rgba(0, 0, 0, 0);
-		}
+      table {
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+      }
 
-		table {
-			border-collapse: collapse;
-			border-spacing: 0;
-		}
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
 
-		.table thead > tr > th, .table tbody > tr > th, .table tfoot > tr > th, .table thead > tr > td, .table tbody > tr > td, .table tfoot > tr > td {
-			padding: 8px;
-			line-height: 1.428571429;
-			vertical-align: middle;
-			border-top: 1px solid #DDD;
-			font-size: 0.7em;
-			color: #888;
-		}
+      .table thead > tr > th,
+      .table tbody > tr > th,
+      .table tfoot > tr > th,
+      .table thead > tr > td,
+      .table tbody > tr > td,
+      .table tfoot > tr > td {
+        padding: 8px;
+        line-height: 1.428571429;
+        vertical-align: middle;
+        border-top: 1px solid #ddd;
+        font-size: 0.7em;
+        color: #888;
+      }
 
-		table tbody tr td:first-child {
-			width: 50%;
-			color: #f00;
-			font-size: 0.8em;
-		}
+      table tbody tr td:first-child {
+        width: 50%;
+        color: #f00;
+        font-size: 0.8em;
+      }
 
-		table tbody tr td:first-child span:first-child {
-			color: #080;
-		}
+      table tbody tr td:first-child span:first-child {
+        color: #080;
+      }
 
-		table tbody tr td:first-child span:nth-child(2) {
-			color: #008;
-		}
+      table tbody tr td:first-child span:nth-child(2) {
+        color: #008;
+      }
 
-		.ac-container div:nth-child(2) table tbody tr td:first-child {
-			width: 20%;
-		}
+      .ac-container div:nth-child(2) table tbody tr td:first-child {
+        width: 20%;
+      }
 
-		.ac-container input:checked#ac-head ~ article {
-			height: 90px;
-		}
+      .ac-container input:checked#ac-head ~ article {
+        height: 90px;
+      }
 
-		.ac-container input:checked#ac-0 ~ article {
-			height: 327px;
-		}
+      .ac-container input:checked#ac-0 ~ article {
+        height: 327px;
+      }
 
-		.ac-container input:checked#ac-1 ~ article {
-			height: 471px;
-		}
+      .ac-container input:checked#ac-1 ~ article {
+        height: 471px;
+      }
 
-		.ac-container input:checked#ac-2 ~ article {
-			height: 399px;
-		}
+      .ac-container input:checked#ac-2 ~ article {
+        height: 399px;
+      }
 
-		.ac-container input:checked#ac-3 ~ article {
-			height: 238px;
-		}
+      .ac-container input:checked#ac-3 ~ article {
+        height: 238px;
+      }
 
-		.ac-container input:checked#ac-4 ~ article {
-			height: 425px;
-		}
+      .ac-container input:checked#ac-4 ~ article {
+        height: 425px;
+      }
 
-		.ac-container input:checked#ac-5 ~ article {
-			height: 156px;
-		}
+      .ac-container input:checked#ac-5 ~ article {
+        height: 156px;
+      }
 
-		.ac-container input:checked#ac-6 ~ article {
-			height: 325px;
-		}
+      .ac-container input:checked#ac-6 ~ article {
+        height: 415px;
+      }
 
-		.ac-container input:checked#ac-7 ~ article {
-			height: 207px;
-		}
-	</style>
-</head>
-<body>
-	<div id="mainPopup">
-		<section class="ac-container">
-			<div>
-				<input class="rad_section" id="ac-head" name="accordion-1" type="radio">
-				<label for="ac-head">Git Cheat Sheet</label>
-				<article class="ac-large">
-					<p>Creator: <a target="_blank" href="http://themergency.com/git-cheat-sheet-chrome-extension">Brad Vincent</a> |
-						Original: <a target="_blank" href="http://scotch.io/bar-talk/git-cheat-sheet">Git Cheat Sheet</a> via <a target="_blank" href="http://scotch.io">scotch.io</a></p>
-					<p>Contribute: <a target="_blank" href="https://github.com/bradvin/Git-Cheat-Sheet-Chrome-Extension">GitHub Repo</a> |
-						Learn: <a target="_blank" href="http://try.github.io/">try.github.io</a> | Read : <a href="http://git-scm.com/book">Pro Git</a></p>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-0" name="accordion-1" type="radio">
-				<label for="ac-0">Terminology<a target="_blank" href="http://stackoverflow.com/questions/7076164/terminology-used-by-git">more
-					terminology</a></label>
-				<article class="ac-large">
-					<table class="table table-responsive">
-						<tbody>
-						<tr>
-							<td>repo</td>
-							<td>A place where the history of your work/code is stored</td>
-						</tr>
-						<tr>
-							<td>clone</td>
-							<td>Copy a git repository so you can add to it</td>
-						</tr>
-						<tr>
-							<td>fork (GitHub)</td>
-							<td>Create your own server side copy of someone else's repo</td>
-						</tr>
-						<tr>
-							<td>commit</td>
-							<td>A state of your project at a certain time</td>
-						</tr>
-						<tr>
-							<td>branch</td>
-							<td>A different line of development. A branch is just a "label" which points to a specific commit</td>
-						</tr>
-						<tr>
-							<td>master</td>
-							<td>The default branch we develop in</td>
-						</tr>
-						<tr>
-							<td>origin</td>
-							<td>The default upstream repo (Github)</td>
-						</tr>
-						<tr>
-							<td>HEAD</td>
-							<td>The current branch</td>
-						</tr>
-						<tr>
-							<td>remote</td>
-							<td>A repository stored on another computer</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-1" name="accordion-1" type="radio">
-				<label for="ac-1">Starting a Repo<span>init/clone/remote</span></label>
-				<article>
-					<table class="table table-responsive table-hover">
-						<tbody>
-						<tr>
-							<td>git init</td>
-							<td>Create a repo from existing data</td>
-						</tr>
-						<tr>
-							<td>git clone <span>&lt;repo url&gt;</span></td>
-							<td>Clone a current repo (into a folder with same name as repo)</td>
-						</tr>
-						<tr>
-							<td>git clone <span>&lt;repo url&gt;</span> <span>&lt;folder name&gt;</span></td>
-							<td>Clone a repo into a specific folder name</td>
-						</tr>
-						<tr>
-							<td>git clone <span>&lt;repo url&gt;</span> <span>.</span></td>
-							<td>Clone a repo into current directory (should be an empty directory)</td>
-						</tr>
-						<tr>
-							<td>git remote add <span>origin</span> <span>http://github.com/username/&lt;repo name&gt;.git</span>
-							</td>
-							<td>Create a remote repo named origin pointing at your Github repo (after you've already created the
-								repo on Github) (used if you git init since the repo you created locally isn't linked to a remote
-								repo yet)
-							</td>
-						</tr>
-						<tr>
-							<td>git remote add <span>origin</span> <span>git@github.com:username/&lt;repo name&gt;.git</span></td>
-							<td>Create a remote repo named origin pointing at your Github repo (using SSH url instead of HTTP url)
-							</td>
-						</tr>
-						<tr>
-							<td>git remote</td>
-							<td>Show the names of the remote repositories you've set up</td>
-						</tr>
-						<tr>
-							<td>git remote <span>-v</span></td>
-							<td>Show the names and URLs of the remote repositories</td>
-						</tr>
-						<tr>
-							<td>git remote rm <span>&lt;remote name&gt;</span></td>
-							<td>Remove a remote repository</td>
-						</tr>
-						<tr>
-							<td>git remote prune <span>origin</span></td>
-							<td>Removes all remote branches from your local clone that have already been deleted from the source</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-2" name="accordion-1" type="radio">
-				<label for="ac-2">Showing/Undoing Changes<span>status/diff/log/blame/reset/revert</span></label>
-				<article class="ac-medium">
-					<table class="table table-responsive table-hover">
-						<tbody>
-						<tr>
-							<td>git status</td>
-							<td>Show the files changed</td>
-						</tr>
-						<tr>
-							<td>git diff</td>
-							<td>Show changes to files compared to last commit</td>
-						</tr>
-						<tr>
-							<td>git diff <span>&lt;filename&gt;</span></td>
-							<td>Show changes in single file compared to last commit</td>
-						</tr>
-						<tr>
-							<td>git diff <span>&lt;commit id</span> <span>&gt; &lt;commit id 2&gt;</span></td>
-							<td>Show changes between two different commits.</td>
-						</tr>
-						<tr>
-							<td>git log</td>
-							<td>Show history of changes</td>
-						</tr>
-						<tr>
-							<td>git blame <span>&lt;filename&gt;</span></td>
-							<td>Show who changed each line of a file and when</td>
-						</tr>
-						<tr>
-							<td>git reset <span>--hard</span></td>
-							<td>Go back to the last commit (will not delete new unstaged files)</td>
-						</tr>
-						<tr>
-							<td>git revert <span>HEAD</span></td>
-							<td>Undo/revert last commit AND create a new commit</td>
-						</tr>
-						<tr>
-							<td>git revert <span>&lt;commit id&gt;</span></td>
-							<td>Undo/revert a specific commit AND create a new commit</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-3" name="accordion-1" type="radio">
-				<label for="ac-3">Staging<span>add/rm</span></label>
-				<article class="ac-large">
-					<table class="table table-responsive table-hover">
-						<tbody>
-						<tr>
-							<td>git add <span>-A</span></td>
-							<td>Stage all files (new, modified, and deleted)</td>
-						</tr>
-						<tr>
-							<td>git add <span>.</span></td>
-							<td>Stage new and modified files (not deleted)</td>
-						</tr>
-						<tr>
-							<td>git add <span>-u</span></td>
-							<td>Stage modified and deleted files (not new)</td>
-						</tr>
-						<tr>
-							<td>git rm <span>&lt;filename&gt;</span></td>
-							<td>Remove a file and untrack it</td>
-						</tr>
-						<tr>
-							<td>git rm <span>&lt;filename&gt;</span> <span>-cached</span></td>
-							<td>Untrack a file only. It will still exist. Usually you will add this file to .gitignore after rm</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-4" name="accordion-1" type="radio">
-				<label for="ac-4">Publishing<span>commit/stash/push</span></label>
-				<article class="ac-large">
-					<table class="table table-responsive table-hover">
-						<tbody>
-						<tr>
-							<td>git commit <span>-m "message"</span></td>
-							<td>Commit the local changes that were staged</td>
-						</tr>
-						<tr>
-							<td>git commit <span>-am "message"</span></td>
-							<td>Stage files (modified and deleted, not new) and commit</td>
-						</tr>
-						<tr>
-							<td>git stash</td>
-							<td>Take the uncommitted work (modified tracked files and staged changes) and saves it</td>
-						</tr>
-						<tr>
-							<td>git stash list</td>
-							<td>Show list of stashes</td>
-						</tr>
-						<tr>
-							<td>git stash apply</td>
-							<td>Reapply the latest stashed contents</td>
-						</tr>
-						<tr>
-							<td>git stash apply <span>&lt;stash id&gt;</span></td>
-							<td>Reapply a specific stash. (stash id = <strong>stash@{2})</strong></td>
-						</tr>
-						<tr>
-							<td>git stash drop <span>&lt;stash id&gt;</span></td>
-							<td>Drop a specific stash</td>
-						</tr>
-						<tr>
-							<td>git push</td>
-							<td>Push your changes to the origin</td>
-						</tr>
-						<tr>
-							<td>git push origin <span>&lt;local branch name&gt;</span></td>
-							<td>Push a branch to the origin</td>
-						</tr>
-						<tr>
-							<td>git tag <span>&lt;tag name&gt;</span></td>
-							<td>Tag a version (ie v1.0). Useful for Github releases.</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-5" name="accordion-1" type="radio">
-				<label for="ac-5">Updating and Getting Code<span>fetch/pull</span></label>
-				<article class="ac-large">
-					<table class="table table-responsive table-hover">
-						<tbody>
-						<tr>
-							<td>git fetch</td>
-							<td>Get the latest changes from origin (don't merge)</td>
-						</tr>
-						<tr>
-							<td>git pull</td>
-							<td>Get the latest changes from origin AND merge</td>
-						</tr>
-						<tr>
-							<td>git submodule forearch git pull</td>
-							<td>In all submodules (subrepositories), get the latest changes from origin AND merge</td>
-						</tr>
-						<tr>
-							<td>git checkout <span>-b</span> <span>&lt;new branch name&gt;</span> <span>origin/&lt;branch name&gt;</span></td>
-							<td>Get a remote branch from origin into a local branch (naming the branch and switching to it)</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-6" name="accordion-1" type="radio">
-				<label for="ac-6">Branching<span>branch/checkout</span></label>
-				<article class="ac-large">
-					<table class="table table-responsive table-hover">
-						<tbody>
-						<tr>
-							<td>git branch</td>
-							<td>Show all branches (local)</td>
-						</tr>
-						<tr>
-							<td>git branch <span>-a</span></td>
-							<td>Show all branches (local and remote)</td>
-						</tr>
-						<tr>
-							<td>git branch <span>&lt;branch name&gt;</span></td>
-							<td>Create a branch from HEAD</td>
-						</tr>
-						<tr>
-							<td>git checkout <span>-b</span> <span>&lt;branch name&gt;</span></td>
-							<td>Create a new branch and switch to it</td>
-						</tr>
-						<tr>
-							<td>git checkout <span>&lt;branch name&gt;</span></td>
-							<td>Switch to an already created branch</td>
-						</tr>
-						<tr>
-							<td>git push origin <span>&lt;branch name&gt;</span></td>
-							<td>Push a branch up to the origin (Github)</td>
-						</tr>
-						<tr>
-							<td>git checkout <span>-b</span> <span>&lt;new branch name&gt;</span> <span>origin/&lt;branch name&gt;</span></td>
-							<td>Get a remote branch from origin into a local branch (naming the branch and switching to it)</td>
-						</tr>
-						<tr>
-							<td>git push origin <span>-delete</span> <span>&lt;branch name&gt;</span></td>
-							<td>Delete a branch locally and remotely</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-			<div>
-				<input class="rad_section" id="ac-7" name="accordion-1" type="radio">
-				<label for="ac-7">Branching (Advanced)<span>merge/rebase</span></label>
-				<article class="ac-large">
-					<table class="table table-responsive table-hover">
-						<tbody>
-						<tr>
-							<td>
-								git checkout master<br>
-								git merge <span>&lt;branch name&gt;</span>
-							</td>
-							<td>Merge a specific branch into the master branch.</td>
-						</tr>
-						<tr>
-							<td>git rebase <span>&lt;branch name&gt;</span></td>
-							<td>Take all the changes in one branch and replay them on another. Usually used in a feature branch.
-								Rebase the master to the feature branch so you are testing your feature on the latest main code
-								base. Then merge to the master.
-							</td>
-						</tr>
-						<tr>
-							<td>git cherry-pick <span>&lt;commit id&gt;</span></td>
-							<td>Merge just <strong>one specific commit</strong> from another branch to your current branch.</td>
-						</tr>
-						</tbody>
-					</table>
-				</article>
-			</div>
-		</section>
-	</div>
-	<script src="functions.js" type="text/javascript"></script>
-</body>
+      .ac-container input:checked#ac-7 ~ article {
+        height: 207px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainPopup">
+      <section class="ac-container">
+        <div>
+          <input
+            class="rad_section"
+            id="ac-head"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-head">Git Cheat Sheet</label>
+          <article class="ac-large">
+            <p>
+              Creator:
+              <a
+                target="_blank"
+                href="http://themergency.com/git-cheat-sheet-chrome-extension"
+                >Brad Vincent</a
+              >
+              | Original:
+              <a
+                target="_blank"
+                href="http://scotch.io/bar-talk/git-cheat-sheet"
+                >Git Cheat Sheet</a
+              >
+              via <a target="_blank" href="http://scotch.io">scotch.io</a>
+            </p>
+            <p>
+              Contribute:
+              <a
+                target="_blank"
+                href="https://github.com/bradvin/Git-Cheat-Sheet-Chrome-Extension"
+                >GitHub Repo</a
+              >
+              | Learn:
+              <a target="_blank" href="http://try.github.io/">try.github.io</a>
+              | Read : <a href="http://git-scm.com/book">Pro Git</a>
+            </p>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-0"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-0"
+            >Terminology<a
+              target="_blank"
+              href="http://stackoverflow.com/questions/7076164/terminology-used-by-git"
+              >more terminology</a
+            ></label
+          >
+          <article class="ac-large">
+            <table class="table table-responsive">
+              <tbody>
+                <tr>
+                  <td>repo</td>
+                  <td>A place where the history of your work/code is stored</td>
+                </tr>
+                <tr>
+                  <td>clone</td>
+                  <td>Copy a git repository so you can add to it</td>
+                </tr>
+                <tr>
+                  <td>fork (GitHub)</td>
+                  <td>
+                    Create your own server side copy of someone else's repo
+                  </td>
+                </tr>
+                <tr>
+                  <td>commit</td>
+                  <td>A state of your project at a certain time</td>
+                </tr>
+                <tr>
+                  <td>branch</td>
+                  <td>
+                    A different line of development. A branch is just a "label"
+                    which points to a specific commit
+                  </td>
+                </tr>
+                <tr>
+                  <td>master</td>
+                  <td>The default branch we develop in</td>
+                </tr>
+                <tr>
+                  <td>origin</td>
+                  <td>The default upstream repo (Github)</td>
+                </tr>
+                <tr>
+                  <td>HEAD</td>
+                  <td>The current branch</td>
+                </tr>
+                <tr>
+                  <td>remote</td>
+                  <td>A repository stored on another computer</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-1"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-1"
+            >Starting a Repo<span>init/clone/remote</span></label
+          >
+          <article>
+            <table class="table table-responsive table-hover">
+              <tbody>
+                <tr>
+                  <td>git init</td>
+                  <td>Create a repo from existing data</td>
+                </tr>
+                <tr>
+                  <td>git clone <span>&lt;repo url&gt;</span></td>
+                  <td>
+                    Clone a current repo (into a folder with same name as repo)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    git clone <span>&lt;repo url&gt;</span>
+                    <span>&lt;folder name&gt;</span>
+                  </td>
+                  <td>Clone a repo into a specific folder name</td>
+                </tr>
+                <tr>
+                  <td>
+                    git clone <span>&lt;repo url&gt;</span> <span>.</span>
+                  </td>
+                  <td>
+                    Clone a repo into current directory (should be an empty
+                    directory)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    git remote add <span>origin</span>
+                    <span
+                      >http://github.com/username/&lt;repo name&gt;.git</span
+                    >
+                  </td>
+                  <td>
+                    Create a remote repo named origin pointing at your Github
+                    repo (after you've already created the repo on Github) (used
+                    if you git init since the repo you created locally isn't
+                    linked to a remote repo yet)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    git remote add <span>origin</span>
+                    <span>git@github.com:username/&lt;repo name&gt;.git</span>
+                  </td>
+                  <td>
+                    Create a remote repo named origin pointing at your Github
+                    repo (using SSH url instead of HTTP url)
+                  </td>
+                </tr>
+                <tr>
+                  <td>git remote</td>
+                  <td>
+                    Show the names of the remote repositories you've set up
+                  </td>
+                </tr>
+                <tr>
+                  <td>git remote <span>-v</span></td>
+                  <td>Show the names and URLs of the remote repositories</td>
+                </tr>
+                <tr>
+                  <td>git remote rm <span>&lt;remote name&gt;</span></td>
+                  <td>Remove a remote repository</td>
+                </tr>
+                <tr>
+                  <td>git remote prune <span>origin</span></td>
+                  <td>
+                    Removes all remote branches from your local clone that have
+                    already been deleted from the source
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-2"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-2"
+            >Showing/Undoing Changes<span
+              >status/diff/log/blame/reset/revert</span
+            ></label
+          >
+          <article class="ac-medium">
+            <table class="table table-responsive table-hover">
+              <tbody>
+                <tr>
+                  <td>git status</td>
+                  <td>Show the files changed</td>
+                </tr>
+                <tr>
+                  <td>git diff</td>
+                  <td>Show changes to files compared to last commit</td>
+                </tr>
+                <tr>
+                  <td>git diff <span>&lt;filename&gt;</span></td>
+                  <td>Show changes in single file compared to last commit</td>
+                </tr>
+                <tr>
+                  <td>
+                    git diff <span>&lt;commit id</span>
+                    <span>&gt; &lt;commit id 2&gt;</span>
+                  </td>
+                  <td>Show changes between two different commits.</td>
+                </tr>
+                <tr>
+                  <td>git log</td>
+                  <td>Show history of changes</td>
+                </tr>
+                <tr>
+                  <td>git blame <span>&lt;filename&gt;</span></td>
+                  <td>Show who changed each line of a file and when</td>
+                </tr>
+                <tr>
+                  <td>git reset <span>--hard</span></td>
+                  <td>
+                    Go back to the last commit (will not delete new unstaged
+                    files)
+                  </td>
+                </tr>
+                <tr>
+                  <td>git revert <span>HEAD</span></td>
+                  <td>Undo/revert last commit AND create a new commit</td>
+                </tr>
+                <tr>
+                  <td>git revert <span>&lt;commit id&gt;</span></td>
+                  <td>Undo/revert a specific commit AND create a new commit</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-3"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-3">Staging<span>add/rm</span></label>
+          <article class="ac-large">
+            <table class="table table-responsive table-hover">
+              <tbody>
+                <tr>
+                  <td>git add <span>-A</span></td>
+                  <td>Stage all files (new, modified, and deleted)</td>
+                </tr>
+                <tr>
+                  <td>git add <span>.</span></td>
+                  <td>Stage new and modified files (not deleted)</td>
+                </tr>
+                <tr>
+                  <td>git add <span>-u</span></td>
+                  <td>Stage modified and deleted files (not new)</td>
+                </tr>
+                <tr>
+                  <td>git rm <span>&lt;filename&gt;</span></td>
+                  <td>Remove a file and untrack it</td>
+                </tr>
+                <tr>
+                  <td>
+                    git rm <span>&lt;filename&gt;</span> <span>-cached</span>
+                  </td>
+                  <td>
+                    Untrack a file only. It will still exist. Usually you will
+                    add this file to .gitignore after rm
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-4"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-4">Publishing<span>commit/stash/push</span></label>
+          <article class="ac-large">
+            <table class="table table-responsive table-hover">
+              <tbody>
+                <tr>
+                  <td>git commit <span>-m "message"</span></td>
+                  <td>Commit the local changes that were staged</td>
+                </tr>
+                <tr>
+                  <td>git commit <span>-am "message"</span></td>
+                  <td>
+                    Stage files (modified and deleted, not new) and commit
+                  </td>
+                </tr>
+                <tr>
+                  <td>git stash</td>
+                  <td>
+                    Take the uncommitted work (modified tracked files and staged
+                    changes) and saves it
+                  </td>
+                </tr>
+                <tr>
+                  <td>git stash list</td>
+                  <td>Show list of stashes</td>
+                </tr>
+                <tr>
+                  <td>git stash apply</td>
+                  <td>Reapply the latest stashed contents</td>
+                </tr>
+                <tr>
+                  <td>git stash apply <span>&lt;stash id&gt;</span></td>
+                  <td>
+                    Reapply a specific stash. (stash id =
+                    <strong>stash@{2})</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>git stash drop <span>&lt;stash id&gt;</span></td>
+                  <td>Drop a specific stash</td>
+                </tr>
+                <tr>
+                  <td>git push</td>
+                  <td>Push your changes to the origin</td>
+                </tr>
+                <tr>
+                  <td>
+                    git push origin <span>&lt;local branch name&gt;</span>
+                  </td>
+                  <td>Push a branch to the origin</td>
+                </tr>
+                <tr>
+                  <td>git tag <span>&lt;tag name&gt;</span></td>
+                  <td>Tag a version (ie v1.0). Useful for Github releases.</td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-5"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-5"
+            >Updating and Getting Code<span>fetch/pull</span></label
+          >
+          <article class="ac-large">
+            <table class="table table-responsive table-hover">
+              <tbody>
+                <tr>
+                  <td>git fetch</td>
+                  <td>Get the latest changes from origin (don't merge)</td>
+                </tr>
+                <tr>
+                  <td>git pull</td>
+                  <td>Get the latest changes from origin AND merge</td>
+                </tr>
+                <tr>
+                  <td>git submodule forearch git pull</td>
+                  <td>
+                    In all submodules (subrepositories), get the latest changes
+                    from origin AND merge
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    git checkout <span>-b</span>
+                    <span>&lt;new branch name&gt;</span>
+                    <span>origin/&lt;branch name&gt;</span>
+                  </td>
+                  <td>
+                    Get a remote branch from origin into a local branch (naming
+                    the branch and switching to it)
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-6"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-6">Branching<span>branch/checkout/prune</span></label>
+          <article class="ac-large">
+            <table class="table table-responsive table-hover">
+              <tbody>
+                <tr>
+                  <td>git branch</td>
+                  <td>Show all branches (local)</td>
+                </tr>
+                <tr>
+                  <td>git branch <span>-a</span></td>
+                  <td>Show all branches (local and remote)</td>
+                </tr>
+                <tr>
+                  <td>git branch <span>&lt;branch name&gt;</span></td>
+                  <td>Create a branch from HEAD</td>
+                </tr>
+                <tr>
+                  <td>
+                    git checkout <span>-b</span>
+                    <span>&lt;branch name&gt;</span>
+                  </td>
+                  <td>Create a new branch and switch to it</td>
+                </tr>
+                <tr>
+                  <td>git checkout <span>&lt;branch name&gt;</span></td>
+                  <td>Switch to an already created branch</td>
+                </tr>
+                <tr>
+                  <td>git push origin <span>&lt;branch name&gt;</span></td>
+                  <td>Push a branch up to the origin (Github)</td>
+                </tr>
+                <tr>
+                  <td>
+                    git checkout <span>-b</span>
+                    <span>&lt;new branch name&gt;</span>
+                    <span>origin/&lt;branch name&gt;</span>
+                  </td>
+                  <td>
+                    Get a remote branch from origin into a local branch (naming
+                    the branch and switching to it)
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    git push origin <span>-delete</span>
+                    <span>&lt;branch name&gt;</span>
+                  </td>
+                  <td>Delete a branch locally and remotely</td>
+                </tr>
+                <tr>
+                  <td>
+                    git remote prune origin <span>--dry-run</span><br />
+                    git remote prune origin
+                  </td>
+                  <td>
+                    First, list all the branches that you can delete or prune on
+                    your local repository with <strong>--dry-run</strong>. Next,
+                    prune the local reference to the remote branch.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+        <div>
+          <input
+            class="rad_section"
+            id="ac-7"
+            name="accordion-1"
+            type="radio"
+          />
+          <label for="ac-7"
+            >Branching (Advanced)<span>merge/rebase</span></label
+          >
+          <article class="ac-large">
+            <table class="table table-responsive table-hover">
+              <tbody>
+                <tr>
+                  <td>
+                    git checkout master<br />
+                    git merge <span>&lt;branch name&gt;</span>
+                  </td>
+                  <td>Merge a specific branch into the master branch.</td>
+                </tr>
+                <tr>
+                  <td>git rebase <span>&lt;branch name&gt;</span></td>
+                  <td>
+                    Take all the changes in one branch and replay them on
+                    another. Usually used in a feature branch. Rebase the master
+                    to the feature branch so you are testing your feature on the
+                    latest main code base. Then merge to the master.
+                  </td>
+                </tr>
+                <tr>
+                  <td>git cherry-pick <span>&lt;commit id&gt;</span></td>
+                  <td>
+                    Merge just <strong>one specific commit</strong> from another
+                    branch to your current branch.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </article>
+        </div>
+      </section>
+    </div>
+    <script src="functions.js" type="text/javascript"></script>
+  </body>
 </html>
