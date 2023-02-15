@@ -68,7 +68,7 @@
       }
 
       .ac-container input:checked#ac-1 ~ article {
-        height: 471px;
+        height: 575px;
       }
 
       .ac-container input:checked#ac-2 ~ article {
@@ -100,36 +100,19 @@
     <div id="mainPopup">
       <section class="ac-container">
         <div>
-          <input
-            class="rad_section"
-            id="ac-head"
-            name="accordion-1"
-            type="radio"
-          />
+          <input class="rad_section" id="ac-head" name="accordion-1" type="radio" />
           <label for="ac-head">Git Cheat Sheet</label>
           <article class="ac-large">
             <p>
               Creator:
-              <a
-                target="_blank"
-                href="http://themergency.com/git-cheat-sheet-chrome-extension"
-                >Brad Vincent</a
-              >
+              <a target="_blank" href="http://themergency.com/git-cheat-sheet-chrome-extension">Brad Vincent</a>
               | Original:
-              <a
-                target="_blank"
-                href="http://scotch.io/bar-talk/git-cheat-sheet"
-                >Git Cheat Sheet</a
-              >
+              <a target="_blank" href="http://scotch.io/bar-talk/git-cheat-sheet">Git Cheat Sheet</a>
               via <a target="_blank" href="http://scotch.io">scotch.io</a>
             </p>
             <p>
               Contribute:
-              <a
-                target="_blank"
-                href="https://github.com/bradvin/Git-Cheat-Sheet-Chrome-Extension"
-                >GitHub Repo</a
-              >
+              <a target="_blank" href="https://github.com/bradvin/Git-Cheat-Sheet-Chrome-Extension">GitHub Repo</a>
               | Learn:
               <a target="_blank" href="http://try.github.io/">try.github.io</a>
               | Read : <a href="http://git-scm.com/book">Pro Git</a>
@@ -137,19 +120,8 @@
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-0"
-            name="accordion-1"
-            type="radio"
-          />
-          <label for="ac-0"
-            >Terminology<a
-              target="_blank"
-              href="http://stackoverflow.com/questions/7076164/terminology-used-by-git"
-              >more terminology</a
-            ></label
-          >
+          <input class="rad_section" id="ac-0" name="accordion-1" type="radio" />
+          <label for="ac-0">Terminology<a target="_blank" href="http://stackoverflow.com/questions/7076164/terminology-used-by-git">more terminology</a></label>
           <article class="ac-large">
             <table class="table table-responsive">
               <tbody>
@@ -163,9 +135,7 @@
                 </tr>
                 <tr>
                   <td>fork (GitHub)</td>
-                  <td>
-                    Create your own server side copy of someone else's repo
-                  </td>
+                  <td>Create your own server side copy of someone else's repo</td>
                 </tr>
                 <tr>
                   <td>commit</td>
@@ -173,10 +143,7 @@
                 </tr>
                 <tr>
                   <td>branch</td>
-                  <td>
-                    A different line of development. A branch is just a "label"
-                    which points to a specific commit
-                  </td>
+                  <td>A different line of development. A branch is just a "label" which points to a specific commit</td>
                 </tr>
                 <tr>
                   <td>master</td>
@@ -199,15 +166,8 @@
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-1"
-            name="accordion-1"
-            type="radio"
-          />
-          <label for="ac-1"
-            >Starting a Repo<span>init/clone/remote</span></label
-          >
+          <input class="rad_section" id="ac-1" name="accordion-1" type="radio" />
+          <label for="ac-1">Starting a Repo<span>init/clone/remote</span></label>
           <article>
             <table class="table table-responsive table-hover">
               <tbody>
@@ -217,9 +177,7 @@
                 </tr>
                 <tr>
                   <td>git clone <span>&lt;repo url&gt;</span></td>
-                  <td>
-                    Clone a current repo (into a folder with same name as repo)
-                  </td>
+                  <td>Clone a current repo (into a folder with same name as repo)</td>
                 </tr>
                 <tr>
                   <td>
@@ -229,25 +187,16 @@
                   <td>Clone a repo into a specific folder name</td>
                 </tr>
                 <tr>
-                  <td>
-                    git clone <span>&lt;repo url&gt;</span> <span>.</span>
-                  </td>
-                  <td>
-                    Clone a repo into current directory (should be an empty
-                    directory)
-                  </td>
+                  <td>git clone <span>&lt;repo url&gt;</span> <span>.</span></td>
+                  <td>Clone a repo into current directory (should be an empty directory)</td>
                 </tr>
                 <tr>
                   <td>
                     git remote add <span>origin</span>
-                    <span
-                      >http://github.com/username/&lt;repo name&gt;.git</span
-                    >
+                    <span>http://github.com/username/&lt;repo name&gt;.git</span>
                   </td>
                   <td>
-                    Create a remote repo named origin pointing at your Github
-                    repo (after you've already created the repo on Github) (used
-                    if you git init since the repo you created locally isn't
+                    Create a remote repo named origin pointing at your Github repo (after you've already created the repo on Github) (used if you git init since the repo you created locally isn't
                     linked to a remote repo yet)
                   </td>
                 </tr>
@@ -256,16 +205,11 @@
                     git remote add <span>origin</span>
                     <span>git@github.com:username/&lt;repo name&gt;.git</span>
                   </td>
-                  <td>
-                    Create a remote repo named origin pointing at your Github
-                    repo (using SSH url instead of HTTP url)
-                  </td>
+                  <td>Create a remote repo named origin pointing at your Github repo (using SSH url instead of HTTP url)</td>
                 </tr>
                 <tr>
                   <td>git remote</td>
-                  <td>
-                    Show the names of the remote repositories you've set up
-                  </td>
+                  <td>Show the names of the remote repositories you've set up</td>
                 </tr>
                 <tr>
                   <td>git remote <span>-v</span></td>
@@ -277,27 +221,19 @@
                 </tr>
                 <tr>
                   <td>git remote prune <span>origin</span></td>
-                  <td>
-                    Removes all remote branches from your local clone that have
-                    already been deleted from the source
-                  </td>
+                  <td>Removes all remote branches from your local clone that have already been deleted from the source</td>
+                </tr>
+                <tr>
+                  <td>git config <span>--global --edit</span></td>
+                  <td>Open and edit the git config file</td>
                 </tr>
               </tbody>
             </table>
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-2"
-            name="accordion-1"
-            type="radio"
-          />
-          <label for="ac-2"
-            >Showing/Undoing Changes<span
-              >status/diff/log/blame/reset/revert</span
-            ></label
-          >
+          <input class="rad_section" id="ac-2" name="accordion-1" type="radio" />
+          <label for="ac-2">Showing/Undoing Changes<span>status/diff/log/blame/reset/revert</span></label>
           <article class="ac-medium">
             <table class="table table-responsive table-hover">
               <tbody>
@@ -330,10 +266,7 @@
                 </tr>
                 <tr>
                   <td>git reset <span>--hard</span></td>
-                  <td>
-                    Go back to the last commit (will not delete new unstaged
-                    files)
-                  </td>
+                  <td>Go back to the last commit (will not delete new unstaged files)</td>
                 </tr>
                 <tr>
                   <td>git revert <span>HEAD</span></td>
@@ -348,12 +281,7 @@
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-3"
-            name="accordion-1"
-            type="radio"
-          />
+          <input class="rad_section" id="ac-3" name="accordion-1" type="radio" />
           <label for="ac-3">Staging<span>add/rm</span></label>
           <article class="ac-large">
             <table class="table table-responsive table-hover">
@@ -375,25 +303,15 @@
                   <td>Remove a file and untrack it</td>
                 </tr>
                 <tr>
-                  <td>
-                    git rm <span>&lt;filename&gt;</span> <span>-cached</span>
-                  </td>
-                  <td>
-                    Untrack a file only. It will still exist. Usually you will
-                    add this file to .gitignore after rm
-                  </td>
+                  <td>git rm <span>&lt;filename&gt;</span> <span>-cached</span></td>
+                  <td>Untrack a file only. It will still exist. Usually you will add this file to .gitignore after rm</td>
                 </tr>
               </tbody>
             </table>
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-4"
-            name="accordion-1"
-            type="radio"
-          />
+          <input class="rad_section" id="ac-4" name="accordion-1" type="radio" />
           <label for="ac-4">Publishing<span>commit/stash/push</span></label>
           <article class="ac-large">
             <table class="table table-responsive table-hover">
@@ -404,16 +322,11 @@
                 </tr>
                 <tr>
                   <td>git commit <span>-am "message"</span></td>
-                  <td>
-                    Stage files (modified and deleted, not new) and commit
-                  </td>
+                  <td>Stage files (modified and deleted, not new) and commit</td>
                 </tr>
                 <tr>
                   <td>git stash</td>
-                  <td>
-                    Take the uncommitted work (modified tracked files and staged
-                    changes) and saves it
-                  </td>
+                  <td>Take the uncommitted work (modified tracked files and staged changes) and saves it</td>
                 </tr>
                 <tr>
                   <td>git stash list</td>
@@ -439,9 +352,7 @@
                   <td>Push your changes to the origin</td>
                 </tr>
                 <tr>
-                  <td>
-                    git push origin <span>&lt;local branch name&gt;</span>
-                  </td>
+                  <td>git push origin <span>&lt;local branch name&gt;</span></td>
                   <td>Push a branch to the origin</td>
                 </tr>
                 <tr>
@@ -453,15 +364,8 @@
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-5"
-            name="accordion-1"
-            type="radio"
-          />
-          <label for="ac-5"
-            >Updating and Getting Code<span>fetch/pull</span></label
-          >
+          <input class="rad_section" id="ac-5" name="accordion-1" type="radio" />
+          <label for="ac-5">Updating and Getting Code<span>fetch/pull</span></label>
           <article class="ac-large">
             <table class="table table-responsive table-hover">
               <tbody>
@@ -475,10 +379,7 @@
                 </tr>
                 <tr>
                   <td>git submodule forearch git pull</td>
-                  <td>
-                    In all submodules (subrepositories), get the latest changes
-                    from origin AND merge
-                  </td>
+                  <td>In all submodules (subrepositories), get the latest changes from origin AND merge</td>
                 </tr>
                 <tr>
                   <td>
@@ -486,22 +387,14 @@
                     <span>&lt;new branch name&gt;</span>
                     <span>origin/&lt;branch name&gt;</span>
                   </td>
-                  <td>
-                    Get a remote branch from origin into a local branch (naming
-                    the branch and switching to it)
-                  </td>
+                  <td>Get a remote branch from origin into a local branch (naming the branch and switching to it)</td>
                 </tr>
               </tbody>
             </table>
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-6"
-            name="accordion-1"
-            type="radio"
-          />
+          <input class="rad_section" id="ac-6" name="accordion-1" type="radio" />
           <label for="ac-6">Branching<span>branch/checkout/prune</span></label>
           <article class="ac-large">
             <table class="table table-responsive table-hover">
@@ -539,10 +432,7 @@
                     <span>&lt;new branch name&gt;</span>
                     <span>origin/&lt;branch name&gt;</span>
                   </td>
-                  <td>
-                    Get a remote branch from origin into a local branch (naming
-                    the branch and switching to it)
-                  </td>
+                  <td>Get a remote branch from origin into a local branch (naming the branch and switching to it)</td>
                 </tr>
                 <tr>
                   <td>
@@ -556,26 +446,15 @@
                     git remote prune origin <span>--dry-run</span><br />
                     git remote prune origin
                   </td>
-                  <td>
-                    First, list all the branches that you can delete or prune on
-                    your local repository with <strong>--dry-run</strong>. Next,
-                    prune the local reference to the remote branch.
-                  </td>
+                  <td>First, list all the branches that you can delete or prune on your local repository with <strong>--dry-run</strong>. Next, prune the local reference to the remote branch.</td>
                 </tr>
               </tbody>
             </table>
           </article>
         </div>
         <div>
-          <input
-            class="rad_section"
-            id="ac-7"
-            name="accordion-1"
-            type="radio"
-          />
-          <label for="ac-7"
-            >Branching (Advanced)<span>merge/rebase</span></label
-          >
+          <input class="rad_section" id="ac-7" name="accordion-1" type="radio" />
+          <label for="ac-7">Branching (Advanced)<span>merge/rebase</span></label>
           <article class="ac-large">
             <table class="table table-responsive table-hover">
               <tbody>
@@ -589,18 +468,13 @@
                 <tr>
                   <td>git rebase <span>&lt;branch name&gt;</span></td>
                   <td>
-                    Take all the changes in one branch and replay them on
-                    another. Usually used in a feature branch. Rebase the master
-                    to the feature branch so you are testing your feature on the
+                    Take all the changes in one branch and replay them on another. Usually used in a feature branch. Rebase the master to the feature branch so you are testing your feature on the
                     latest main code base. Then merge to the master.
                   </td>
                 </tr>
                 <tr>
                   <td>git cherry-pick <span>&lt;commit id&gt;</span></td>
-                  <td>
-                    Merge just <strong>one specific commit</strong> from another
-                    branch to your current branch.
-                  </td>
+                  <td>Merge just <strong>one specific commit</strong> from another branch to your current branch.</td>
                 </tr>
               </tbody>
             </table>
